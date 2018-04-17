@@ -7,11 +7,11 @@ import java.util.List;
 
 public class ArrayListDemo {
     public static void main(String[] args) {
-        ArrayList<String> friends = new ArrayList<>();
+        ArrayList<String> friends = new ArrayList<>();//数组列表
         friends.add("Peter");
         friends.add("Paul");
         friends.remove(1);
-        friends.add(0, "Paul"); // Adds before index 0
+        friends.add(0, "Paul"); // Adds before index 0 把0位换位Paul，而不是在前面加一个
         System.out.println("friends=" + friends);
         String first = friends.get(0);
         System.out.println("first=" + first);
@@ -20,7 +20,7 @@ public class ArrayListDemo {
             System.out.println(friends.get(i));
         }
         
-        ArrayList<String> people = friends;
+        ArrayList<String> people = friends;//people 和 friends 指向一个数组列表
         people.set(0, "Mary"); // now friends.get(0) is also "Mary"
         System.out.println("friends=" + friends);
         
@@ -29,12 +29,13 @@ public class ArrayListDemo {
         System.out.println("copiedFriends=" + copiedFriends);
         System.out.println("friends=" + friends);
         
-        friends = new ArrayList<>(List.of("Peter", "Paul", "Mary"));
-        String[] names = friends.toArray(new String[0]);
-        System.out.println("names=" + Arrays.toString(names));               
+        //List.of为啥报错？The method of(String, String, String) is undefined for the type List
+        //friends = new ArrayList<>(List.of("Peter", "Paul", "Mary"));
+        //String[] names = friends.toArray(new String[0]);
+        //System.out.println("names=" + Arrays.toString(names));               
         
-        ArrayList<String> moreFriends = new ArrayList<>(List.of(names));
-        System.out.println("moreFriends=" + moreFriends);         
+       //ArrayList<String> moreFriends = new ArrayList<>(List.of(names));
+       //System.out.println("moreFriends=" + moreFriends);         
         
         Collections.reverse(friends);
         System.out.println("After reversing, friends=" + friends);

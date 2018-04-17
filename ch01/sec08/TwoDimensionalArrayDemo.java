@@ -15,7 +15,7 @@ public class TwoDimensionalArrayDemo {
         int[] temp = square[0];
         square[0] = square[1];
         square[1] = temp;
-        System.out.println(Arrays.deepToString(square));
+        System.out.println(Arrays.deepToString(square));//输出二位数组的元素列表
         
         int n = 5;
         int[][] triangle = new int[n][];
@@ -31,11 +31,11 @@ public class TwoDimensionalArrayDemo {
             for (int c = 0; c < triangle[r].length; c++) {
                 System.out.printf("%4d", triangle[r][c]);
             }
-            System.out.println();
+            System.out.println();   //换行
         }
         for (int[] row : triangle) {
             for (int element : row) {
-               System.out.printf("%4d", element);
+               System.out.printf("%3d", element);
             }
             System.out.println();
         }
