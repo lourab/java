@@ -32,7 +32,7 @@ public class NumberDemo {
         System.out.println(Double.isNaN(0.0 / 0.0));
         System.out.println(Double.isFinite(0.0 / 0.0));
         
-        // Roundoff舍入 error
+        // Roundoff error
         
         System.out.println(2.0 - 1.1);
         

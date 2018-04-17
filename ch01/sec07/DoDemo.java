@@ -13,7 +13,6 @@ public class DoDemo {
          count++;
       } while (next != target);
          
-      System.out.println("After " + count + " iterations, there was a values of " + target);//println()
-      System.out.printf("After %d iterations, there was a values of %d", count, target);//printf()
+      System.out.println("After " + count + " iterations, there was a values of " + target);
    }
 }
